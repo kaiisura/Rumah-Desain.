@@ -1,0 +1,534 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Rumah Desain
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-[#f6f5f3] min-h-screen">
+  <header class="px-6 sm:px-10 md:px-16 lg:px-20 xl:px-28 pt-6 pb-2 bg-[#f6f5f3] relative z-10">
+   <nav class="flex items-center justify-between border-b-2 border-[#2a2e8b] pb-3">
+    <div class="flex items-center space-x-2">
+     <img alt="Orange logo with a triangle and semi-circle shapes representing Rumah Desain" class="w-[100px] h-[90px] object-contain" height="30" src="https://i.pinimg.com/736x/6e/1c/14/6e1c14d63081f2311b82e39454156469.jpg" width="100px"/>
+     <span class="text-[18px] font-normal text-black">
+    </span>
+    </div>
+    <ul id="nav-links" class="hidden md:flex items-center space-x-8 text-[14px] font-semibold">
+     <li>
+      <a class="text-[#f2945f] cursor-pointer" data-link="home" href="javascript:void(0)">
+       HOME
+      </a>
+     </li>
+     <li>
+      <a class="text-black cursor-pointer" data-link="collection" href="javascript:void(0)">
+       COLLECTION
+      </a>
+     </li>
+     <li>
+      <a class="text-black cursor-pointer" data-link="mylist" href="javascript:void(0)">
+       MY LIST
+      </a>
+     </li>
+     <li>
+      <a class="text-black cursor-pointer" data-link="consultation" href="javascript:void(0)">
+       CONSULTATION
+      </a>
+     </li>
+    </ul>
+    <button class="hidden md:block bg-[#f2945f] text-black text-[14px] font-semibold rounded-full px-6 py-2" id="signInBtn" type="button">
+     SIGN IN
+    </button>
+   </nav>
+  </header>
+  <main class="px-6 sm:px-10 md:px-16 lg:px-20 xl:px-28 mt-6">
+   <section class="relative rounded-lg overflow-hidden" id="homeSection">
+    <img alt="Modern house exterior with large glass windows and trees in the background during dusk" class="w-full h-[300px] object-cover rounded-lg" height="300" src="https://storage.googleapis.com/a1aa/image/71902eec-4e08-4965-2ba2-dd03eb911695.jpg" width="1200"/>
+    <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40 px-4">
+     <h1 class="text-white text-4xl sm:text-5xl font-extrabold leading-tight text-center max-w-4xl">
+      Our New Collection
+     </h1>
+     <form aria-label="Search new collection" class="mt-6 w-full max-w-xl" id="searchForm" role="search">
+      <label class="sr-only" for="search">
+       Search
+      </label>
+      <div class="relative">
+       <input aria-describedby="searchHelp" class="w-full rounded-full py-3 px-6 text-lg text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#b3742a] focus:ring-opacity-75" id="search" placeholder="Search" type="search"/>
+       <button aria-label="Search" class="absolute right-3 top-1/2 -translate-y-1/2 text-[#b3742a] text-xl" type="submit">
+        <i class="fas fa-search">
+        </i>
+       </button>
+      </div>
+      <p class="sr-only" id="searchHelp">Type and press enter to search the collection</p>
+     </form>
+    </div>
+   </section>
+   <section class="mt-10 flex flex-col md:flex-row md:space-x-8" id="collectionSection">
+    <nav aria-label="Filter categories" class="flex md:flex-col space-x-4 md:space-x-0 md:space-y-4 mb-6 md:mb-0">
+     <button aria-pressed="true" class="category-btn bg-[#f2945f] text-white font-semibold rounded-full px-6 py-2 text-[14px] md:w-[140px] text-center" data-category="popular" type="button">
+      Popular
+     </button>
+     <button aria-pressed="false" class="category-btn bg-white text-[#7f7f7f] font-semibold rounded-full px-6 py-2 text-[14px] md:w-[140px] text-center" data-category="residential" type="button">
+      Residential
+     </button>
+     <button aria-pressed="false" class="category-btn bg-white text-[#7f7f7f] font-semibold rounded-full px-6 py-2 text-[14px] md:w-[140px] text-center" data-category="interior" type="button">
+      Interior
+     </button>
+     <button aria-pressed="false" class="category-btn bg-white text-[#7f7f7f] font-semibold rounded-full px-6 py-2 text-[14px] md:w-[140px] text-center" data-category="commercial" type="button">
+      Commercial
+     </button>
+    </nav>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:flex-1" id="collectionGrid">
+     <article class="flex flex-col" data-category="popular residential">
+      <img alt="Black modern house exterior with palm trees and a stone pathway in front" class="rounded-md object-cover w-full h-[160px] sm:h-[140px]" height="250" src="https://storage.googleapis.com/a1aa/image/08fb0e06-4297-42c8-7178-896675e7f5e2.jpg" width="400"/>
+      <h3 class="mt-3 text-[16px] font-normal text-black">
+       Harmoni Design
+      </h3>
+      <div class="flex items-center mt-1 space-x-2">
+       <span class="font-bold text-[14px] text-black">
+        4.5
+       </span>
+       <div class="flex text-[#f9b233] text-[14px]">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </div>
+       <button aria-label="Add Harmoni Design to list" class="ml-auto bg-[#4b4f9a] text-white text-[14px] font-semibold rounded-full px-4 py-1 flex items-center space-x-1 add-btn" type="button" data-name="Harmoni Design">
+        <i class="fas fa-shopping-bag">
+        </i>
+        <span>
+         add
+        </span>
+       </button>
+      </div>
+      <p class="text-[10px] font-extrabold text-[#4b4f9a] mt-0.5">
+       40 REVIEWS
+      </p>
+     </article>
+     <article class="flex flex-col" data-category="popular residential interior">
+      <img alt="White modern house exterior with blue outdoor sofa and greenery" class="rounded-md object-cover w-full h-[160px] sm:h-[140px]" height="250" src="https://storage.googleapis.com/a1aa/image/c70bab8e-e056-4d2f-3aaf-b29b5e1c8e05.jpg" width="400"/>
+      <h3 class="mt-3 text-[16px] font-normal text-black">
+       Vista Architect
+      </h3>
+      <div class="flex items-center mt-1 space-x-2">
+       <span class="font-bold text-[14px] text-black">
+        4.5
+       </span>
+       <div class="flex text-[#f9b233] text-[14px]">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </div>
+       <button aria-label="Add Vista Architect to list" class="ml-auto bg-[#4b4f9a] text-white text-[14px] font-semibold rounded-full px-4 py-1 flex items-center space-x-1 add-btn" type="button" data-name="Vista Architect">
+        <i class="fas fa-shopping-bag">
+        </i>
+        <span>
+         add
+        </span>
+       </button>
+      </div>
+      <p class="text-[10px] font-extrabold text-[#4b4f9a] mt-0.5">
+       60 REVIEWS
+      </p>
+     </article>
+     <article class="flex flex-col" data-category="popular commercial">
+      <img alt="Dark blue modern house exterior with pool and outdoor seating area" class="rounded-md object-cover w-full h-[160px] sm:h-[140px]" height="250" src="https://storage.googleapis.com/a1aa/image/63bc3e4e-a24e-46f3-a4ff-45a879ea456c.jpg" width="400"/>
+      <h3 class="mt-3 text-[16px] font-normal text-black">
+       Cipta Karya Studio
+      </h3>
+      <div class="flex items-center mt-1 space-x-2">
+       <span class="font-bold text-[14px] text-black">
+        4.5
+       </span>
+       <div class="flex text-[#f9b233] text-[14px]">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </div>
+       <button aria-label="Add Cipta Karya Studio to list" class="ml-auto bg-[#4b4f9a] text-white text-[14px] font-semibold rounded-full px-4 py-1 flex items-center space-x-1 add-btn" type="button" data-name="Cipta Karya Studio">
+        <i class="fas fa-shopping-bag">
+        </i>
+        <span>
+         add
+        </span>
+       </button>
+      </div>
+      <p class="text-[10px] font-extrabold text-[#4b4f9a] mt-0.5">
+       50 REVIEWS
+      </p>
+     </article>
+    </div>
+   </section>
+   <section class="mt-10 hidden" id="myListSection">
+    <h2 class="text-2xl font-bold mb-4 text-center text-black">My List</h2>
+    <ul id="myList" class="space-y-3 max-w-3xl mx-auto text-black">
+    </ul>
+    <button class="mt-4 bg-[#f2945f] text-white font-semibold rounded-full px-6 py-2 block mx-auto" id="clearListBtn" type="button">
+     Clear List
+    </button>
+   </section>
+   <section class="mt-10 hidden" id="consultationSection" aria-label="Consultation Section">
+    <h2 class="text-2xl font-bold mb-6 text-center text-black">Consultation</h2>
+    <div class="max-w-3xl mx-auto bg-white rounded-lg shadow p-6">
+     <form id="consultationForm" class="space-y-4" aria-label="Consultation form for customers to ask questions">
+      <div>
+       <label class="block text-gray-700 font-semibold mb-1" for="customerName">Name</label>
+       <input class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f2945f] focus:border-[#f2945f]" id="customerName" name="customerName" placeholder="Your name" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-semibold mb-1" for="customerEmail">Email</label>
+       <input class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f2945f] focus:border-[#f2945f]" id="customerEmail" name="customerEmail" placeholder="Your email" required="" type="email"/>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-semibold mb-1" for="questionText">Question</label>
+       <textarea class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f2945f] focus:border-[#f2945f]" id="questionText" name="questionText" placeholder="Ask your question here..." required="" rows="4"></textarea>
+      </div>
+      <button class="bg-[#f2945f] text-white font-semibold rounded-full px-6 py-2" type="submit">
+       Submit Question
+      </button>
+     </form>
+     <hr class="my-6 border-gray-300"/>
+     <h3 class="text-xl font-semibold mb-4 text-center text-black">Questions & Answers</h3>
+     <ul id="qaList" class="space-y-6 max-h-[400px] overflow-y-auto">
+      <!-- Questions and answers will appear here -->
+     </ul>
+    </div>
+   </section>
+  </main>
+
+  <!-- Modal for Sign In -->
+  <div aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" id="signInModal" role="dialog" aria-modal="true" aria-labelledby="signInTitle">
+   <div class="bg-white rounded-lg max-w-md w-full p-6 relative">
+    <h2 class="text-xl font-bold mb-4" id="signInTitle">Sign In</h2>
+    <form id="signInForm" class="space-y-4">
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="emailInput">Email</label>
+      <input class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#f2945f] focus:ring focus:ring-[#f2945f] focus:ring-opacity-50" id="emailInput" name="email" required="" type="email"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="passwordInput">Password</label>
+      <input class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#f2945f] focus:ring focus:ring-[#f2945f] focus:ring-opacity-50" id="passwordInput" name="password" required="" type="password"/>
+     </div>
+     <div class="flex justify-end space-x-4">
+      <button class="bg-gray-300 text-gray-700 rounded-full px-4 py-2" id="cancelSignIn" type="button">
+       Cancel
+      </button>
+      <button class="bg-[#f2945f] text-white rounded-full px-4 py-2" type="submit">
+       Sign In
+      </button>
+     </div>
+    </form>
+   </div>
+  </div>
+
+  <script>
+   // Navigation active link highlight and section toggle
+   const navLinks = document.querySelectorAll('#nav-links a');
+   const sections = {
+     home: document.getElementById('homeSection'),
+     collection: document.getElementById('collectionSection'),
+     mylist: document.getElementById('myListSection'),
+     consultation: document.getElementById('consultationSection')
+   };
+   const main = document.querySelector('main');
+   const myListSection = document.getElementById('myListSection');
+   const collectionGrid = document.getElementById('collectionGrid');
+
+   function setActiveNav(linkName) {
+     navLinks.forEach(link => {
+       if (link.dataset.link === linkName) {
+         link.classList.add('text-[#f2945f]');
+         link.classList.remove('text-black');
+       } else {
+         link.classList.remove('text-[#f2945f]');
+         link.classList.add('text-black');
+       }
+     });
+   }
+
+   navLinks.forEach(link => {
+     link.addEventListener('click', () => {
+       const linkName = link.dataset.link;
+       setActiveNav(linkName);
+       // Show only the selected section
+       Object.entries(sections).forEach(([key, section]) => {
+         if (key === linkName) {
+           section.classList.remove('hidden');
+         } else {
+           section.classList.add('hidden');
+         }
+       });
+     });
+   });
+
+   // Category filter buttons
+   const categoryButtons = document.querySelectorAll('.category-btn');
+   categoryButtons.forEach(btn => {
+     btn.addEventListener('click', () => {
+       categoryButtons.forEach(b => {
+         b.classList.remove('bg-[#f2945f]', 'text-white');
+         b.classList.add('bg-white', 'text-[#7f7f7f]');
+         b.setAttribute('aria-pressed', 'false');
+       });
+       btn.classList.add('bg-[#f2945f]', 'text-white');
+       btn.classList.remove('bg-white', 'text-[#7f7f7f]');
+       btn.setAttribute('aria-pressed', 'true');
+
+       const category = btn.dataset.category;
+       filterCollection(category);
+     });
+   });
+
+   function filterCollection(category) {
+     const items = collectionGrid.querySelectorAll('article');
+     items.forEach(item => {
+       const cats = item.dataset.category.split(' ');
+       if (category === 'popular' || cats.includes(category)) {
+         item.classList.remove('hidden');
+       } else {
+         item.classList.add('hidden');
+       }
+     });
+   }
+
+   // Initial filter to popular
+   filterCollection('popular');
+
+   // Search functionality
+   const searchForm = document.getElementById('searchForm');
+   const searchInput = document.getElementById('search');
+
+   searchForm.addEventListener('submit', e => {
+     e.preventDefault();
+     const query = searchInput.value.trim().toLowerCase();
+     if (!query) {
+       // Show all items if search is empty
+       filterCollection(document.querySelector('.category-btn[aria-pressed="true"]').dataset.category);
+       return;
+     }
+     const items = collectionGrid.querySelectorAll('article');
+     items.forEach(item => {
+       const title = item.querySelector('h3').textContent.toLowerCase();
+       if (title.includes(query)) {
+         item.classList.remove('hidden');
+       } else {
+         item.classList.add('hidden');
+       }
+     });
+   });
+
+   // Add to My List functionality
+   const addButtons = document.querySelectorAll('.add-btn');
+   const myList = document.getElementById('myList');
+   const clearListBtn = document.getElementById('clearListBtn');
+
+   // Load saved list from localStorage
+   let savedList = JSON.parse(localStorage.getItem('myList')) || [];
+
+   function renderMyList() {
+     myList.innerHTML = '';
+     if (savedList.length === 0) {
+       myList.innerHTML = '<li class="text-center text-gray-500">Your list is empty.</li>';
+       return;
+     }
+     savedList.forEach(item => {
+       const li = document.createElement('li');
+       li.className = 'flex justify-between items-center border border-gray-300 rounded-md px-4 py-2 bg-white shadow-sm';
+       li.textContent = item;
+       const removeBtn = document.createElement('button');
+       removeBtn.className = 'text-red-600 font-semibold ml-4 hover:text-red-800';
+       removeBtn.setAttribute('aria-label', `Remove ${item} from list`);
+       removeBtn.textContent = 'Remove';
+       removeBtn.addEventListener('click', () => {
+         savedList = savedList.filter(i => i !== item);
+         localStorage.setItem('myList', JSON.stringify(savedList));
+         renderMyList();
+       });
+       li.appendChild(removeBtn);
+       myList.appendChild(li);
+     });
+   }
+
+   addButtons.forEach(btn => {
+     btn.addEventListener('click', () => {
+       const name = btn.dataset.name;
+       if (!savedList.includes(name)) {
+         savedList.push(name);
+         localStorage.setItem('myList', JSON.stringify(savedList));
+         alert(`${name} added to your list.`);
+         renderMyList();
+       } else {
+         alert(`${name} is already in your list.`);
+       }
+     });
+   });
+
+   clearListBtn.addEventListener('click', () => {
+     if (confirm('Are you sure you want to clear your list?')) {
+       savedList = [];
+       localStorage.setItem('myList', JSON.stringify(savedList));
+       renderMyList();
+     }
+   });
+
+   renderMyList();
+
+   // Sign In modal functionality
+   const signInBtn = document.getElementById('signInBtn');
+   const signInModal = document.getElementById('signInModal');
+   const cancelSignIn = document.getElementById('cancelSignIn');
+   const signInForm = document.getElementById('signInForm');
+
+   signInBtn.addEventListener('click', () => {
+     signInModal.classList.remove('hidden');
+     signInModal.setAttribute('aria-hidden', 'false');
+     document.body.style.overflow = 'hidden';
+     document.getElementById('emailInput').focus();
+   });
+
+   cancelSignIn.addEventListener('click', () => {
+     signInModal.classList.add('hidden');
+     signInModal.setAttribute('aria-hidden', 'true');
+     document.body.style.overflow = '';
+   });
+
+   signInModal.addEventListener('click', e => {
+     if (e.target === signInModal) {
+       signInModal.classList.add('hidden');
+       signInModal.setAttribute('aria-hidden', 'true');
+       document.body.style.overflow = '';
+     }
+   });
+
+   signInForm.addEventListener('submit', e => {
+     e.preventDefault();
+     const email = signInForm.email.value.trim();
+     const password = signInForm.password.value.trim();
+     if (email && password) {
+       alert(`Signed in as ${email}`);
+       signInModal.classList.add('hidden');
+       signInModal.setAttribute('aria-hidden', 'true');
+       document.body.style.overflow = '';
+       signInForm.reset();
+     } else {
+       alert('Please fill in both email and password.');
+     }
+   });
+
+   // Consultation form and Q&A functionality
+   const consultationForm = document.getElementById('consultationForm');
+   const qaList = document.getElementById('qaList');
+
+   // Load saved Q&A from localStorage
+   let qaData = JSON.parse(localStorage.getItem('qaData')) || [];
+
+   function renderQA() {
+     qaList.innerHTML = '';
+     if (qaData.length === 0) {
+       qaList.innerHTML = '<li class="text-center text-gray-500">No questions yet. Be the first to ask!</li>';
+       return;
+     }
+     qaData.forEach((item, index) => {
+       const li = document.createElement('li');
+       li.className = 'border border-gray-300 rounded-md p-4 bg-gray-50 shadow-sm';
+
+       const questionDiv = document.createElement('div');
+       questionDiv.className = 'mb-2';
+       questionDiv.innerHTML = `<strong class="text-gray-800">Q (${item.name}):</strong> <span class="text-gray-700">${item.question}</span>`;
+       li.appendChild(questionDiv);
+
+       const answerDiv = document.createElement('div');
+       answerDiv.className = 'pl-4 border-l-4 border-[#f2945f] text-gray-700';
+       if (item.answer) {
+         answerDiv.innerHTML = `<strong class="text-[#f2945f]">A (Admin):</strong> <span>${item.answer}</span>`;
+       } else {
+         // If no answer yet, show admin reply form
+         const adminForm = document.createElement('form');
+         adminForm.className = 'mt-2 flex flex-col space-y-2';
+         adminForm.setAttribute('data-index', index);
+
+         const textarea = document.createElement('textarea');
+         textarea.className = 'w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f2945f] focus:border-[#f2945f]';
+         textarea.rows = 2;
+         textarea.placeholder = 'Admin reply here...';
+         textarea.required = true;
+         adminForm.appendChild(textarea);
+
+         const submitBtn = document.createElement('button');
+         submitBtn.type = 'submit';
+         submitBtn.className = 'self-end bg-[#f2945f] text-white font-semibold rounded-full px-4 py-1';
+         submitBtn.textContent = 'Reply';
+         adminForm.appendChild(submitBtn);
+
+         adminForm.addEventListener('submit', e => {
+           e.preventDefault();
+           const idx = parseInt(adminForm.getAttribute('data-index'), 10);
+           const reply = textarea.value.trim();
+           if (reply) {
+             qaData[idx].answer = reply;
+             localStorage.setItem('qaData', JSON.stringify(qaData));
+             renderQA();
+           }
+         });
+
+         answerDiv.appendChild(adminForm);
+       }
+       li.appendChild(answerDiv);
+
+       qaList.appendChild(li);
+     });
+   }
+
+   consultationForm.addEventListener('submit', e => {
+     e.preventDefault();
+     const name = consultationForm.customerName.value.trim();
+     const email = consultationForm.customerEmail.value.trim();
+     const question = consultationForm.questionText.value.trim();
+
+     if (!name || !email || !question) {
+       alert('Please fill in all fields.');
+       return;
+     }
+
+     // Add question to qaData with no answer yet
+     qaData.push({ name, email, question, answer: null });
+     localStorage.setItem('qaData', JSON.stringify(qaData));
+     consultationForm.reset();
+     alert('Your question has been submitted. Admin will reply soon.');
+     renderQA();
+   });
+
+   renderQA();
+  </script>
+ </body>
+</html>
